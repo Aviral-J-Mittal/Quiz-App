@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332768448266",
+    "project_id": "btechquiz",
+    "storage_bucket": "btechquiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332768448266:android:df28f2c91c22d738c2f4f3",
+        "android_client_info": {
+          "package_name": "com.example.btechquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332768448266-gckfm559u8rchcp87e58q2ih7n63lo1l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtAz2muQ0qaLemUda19cTnpQnU1k52fbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332768448266-gckfm559u8rchcp87e58q2ih7n63lo1l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

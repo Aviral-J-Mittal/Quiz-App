@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grid_card"
+        android:layout_margin="16dp"
+        app:cardElevation="7dp"
+        android:translationZ="3dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:id="@+id/linearShow"
+            android:background="@drawable/card_background"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/cat_name"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/numberTest"
+                android:textColor="#6A1B9A"
+                android:textAlignment="center" />
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+

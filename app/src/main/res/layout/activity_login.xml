@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.btechquiz.viewmodel.LoginViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/loginScroll">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/loginConstraint">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/loginLinear"
+                android:orientation="vertical"
+                android:background="@drawable/loginfloral">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/quizlogo"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/b_tech_quiz"
+                    android:textColor="#2E7D32"
+                    android:layout_gravity="center"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/loginText"
+                android:text="@string/login_page"
+                android:textSize="40sp"
+                app:layout_constraintTop_toBottomOf="@id/loginLinear"
+                android:gravity="center"
+                android:textColor="#4527A0" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/loginText"
+                android:id="@+id/loginLayout1"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                app:boxBackgroundColor="#D6D3D3"
+                android:hint="@string/enter_mail_id"
+                android:textColorHint="#0E0D0E">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginEdit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:drawableTint="@color/purple_700"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:text="@={viewmodel.userMail}"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/loginLayout1"
+                android:id="@+id/loginLayout2"
+                app:passwordToggleEnabled="true"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                app:boxBackgroundColor="#D6D3D3"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/enter_password"
+                android:textColorHint="#0E0D0E">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginEdit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="@color/purple_700"
+                    android:padding="20dp"
+                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:text="@={viewmodel.userPass}"
+                    android:inputType="textPassword"
+
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_an_account_yet"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/loginLayout2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:id="@+id/text1"
+                android:layout_marginStart="90dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up_now"
+                app:layout_constraintLeft_toRightOf="@id/text1"
+                app:layout_constraintTop_toBottomOf="@id/loginLayout2"
+                android:textColor="@color/purple_700"
+                android:id="@+id/text2"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:onClick="@{()->viewmodel.onTextClicked()}"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                android:id="@+id/buttonLogin"
+                android:text="@string/login"
+                android:elevation="10dp"
+                android:translationZ="5dp"
+                android:background="@drawable/edittext_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:onClick="@{()->viewmodel.onLoginClicked()}"/>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/googleLogin"
+                android:onClick="@{()->viewmodel.onGoogleClicked()}"
+                app:layout_constraintTop_toBottomOf="@id/buttonLogin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                app:layout_constraintRight_toRightOf="parent">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/symbolgoogle"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_with_google"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:padding="10dp"
+        android:id="@+id/questionImage"
+        android:scrollbars="vertical"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:translationZ="3dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:padding="10dp"
+        android:id="@+id/optionA"
+        android:background="@drawable/unselected_btn"
+        android:translationZ="3dp"
+        android:elevation="5dp"
+        android:stateListAnimator="@null" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:padding="10dp"
+        android:background="@drawable/unselected_btn"
+        android:id="@+id/optionB"
+        android:translationZ="3dp"
+        android:elevation="5dp"
+        android:stateListAnimator="@null" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/unselected_btn"
+        android:id="@+id/optionC"
+        android:translationZ="3dp"
+        android:padding="10dp"
+        android:elevation="5dp"
+        android:stateListAnimator="@null" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:padding="10dp"
+        android:background="@drawable/unselected_btn"
+        android:id="@+id/optionD"
+        android:translationZ="3dp"
+        android:elevation="5dp"
+        android:stateListAnimator="@null" />
+
+
+
+</LinearLayout>
